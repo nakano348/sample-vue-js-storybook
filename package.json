@@ -7,7 +7,9 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "element-ui": "^2.3.4",
@@ -32,6 +34,11 @@
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "webpack-dev-server": "^2.9.1",
+    "@storybook/vue": "^3.4.6",
+    "@storybook/addon-actions": "^3.4.6",
+    "@storybook/addon-links": "^3.4.6",
+    "@storybook/addons": "^3.4.6",
+    "babel-preset-vue": "^2.0.2"
   }
 }
