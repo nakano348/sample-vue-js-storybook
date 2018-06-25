@@ -38,10 +38,12 @@ storiesOf('Element UI', module)
   }))
   .add('ラジオボタン', () => ({
     template: `
-      <div>
-        <el-radio v-model="value" label="departure">出発</el-radio>
-        <el-radio v-model="value" label="arrival">到着</el-radio>
-      </div>
+      <el-form>
+        <el-form-item label="種別">
+          <el-radio v-model="value" label="departure">出発</el-radio>
+          <el-radio v-model="value" label="arrival">到着</el-radio>
+        </el-form-item>
+      </el-form>
       `,
     data() {
       return { value: 'departure' }
