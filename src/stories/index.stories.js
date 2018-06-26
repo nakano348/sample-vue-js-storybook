@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 import { storiesOf } from '@storybook/vue';
-import VueInfoAddon from 'storybook-addon-vue-info'
+import VueInfoAddon from 'storybook-addon-vue-info';
 import StoryRouter from 'storybook-vue-router';
 import Vue from 'vue'
 // Element UI
