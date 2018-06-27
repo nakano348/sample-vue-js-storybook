@@ -43,8 +43,12 @@ storiesOf('Element UI', module)
       template:
         `<el-date-picker type=${types}
           placeholder=${placeHolder}
+          v-model="value"
           value-format="yyyy年MM月dd日">
-        </el-date-picker>`
+        </el-date-picker>`,
+      data() {
+          return { value: '' }
+        }
       }
     })
   .add('ラジオボタン', () => {
