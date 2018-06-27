@@ -28,9 +28,12 @@ storiesOf('アプリケーションとして構築したもの', module)
 storiesOf('Element UI', module)
   .addDecorator(VueInfoAddon)
   .addDecorator(withKnobs)
-  .add('テキストボックス', (() => ({
-    template: '<el-input />'
-  })))
+  .add('テキストボックス', () => {
+    const placeHolder = text('プレースホルダ', '出発駅');
+    return {
+      template: `<el-input placeholder=${placeHolder}></el-input>`
+    }
+  })
   .add('日付入力', () => {
 
     const options = ['date', 'year', 'month', 'dates', 'datetime', 'datetimerange', 'daterange'];
@@ -38,10 +41,10 @@ storiesOf('Element UI', module)
     const placeHolder = text('プレースホルダ', '日付');
     return {
       template:
-      `<el-date-picker type=${types}
-        placeholder=${placeHolder}
-        value-format="yyyy年MM月dd日">
-      </el-date-picker>`
+        `<el-date-picker type=${types}
+          placeholder=${placeHolder}
+          value-format="yyyy年MM月dd日">
+        </el-date-picker>`
       }
     })
   .add('ラジオボタン', () => {
