@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/vue';
 import VueInfoAddon from 'storybook-addon-vue-info';
 import StoryRouter from 'storybook-vue-router';
 import { withKnobs, text, select } from '@storybook/addon-knobs/vue';
+import '@storybook/addon-viewport';
 import Vue from 'vue'
 // Element UI
 import Element from 'element-ui'
